@@ -2,6 +2,8 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links   qwerty</h2>
+    heroku logs --app vuejs1tutorial -n 250
+
     <ul>
       <li>
         <a
