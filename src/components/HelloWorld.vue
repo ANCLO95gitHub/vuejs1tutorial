@@ -4,6 +4,23 @@
     <h2>Essential Links   qwerty</h2>
     heroku logs --app vuejs1tutorial -n 250
     <h3>le h3</h3>
+
+    <br>
+    <div class="leMaster">
+      <div class="sections">
+        Dans Section 1  a
+      </div>
+      <div class="sections">
+        Dans Section 2
+      </div>
+      <div class="sections">
+        Dans Section 3
+      </div>
+      <div class="sections">
+        Dans Section 4
+      </div>
+    </div>
+    <br><br><br>
     <ul>
       <li>
         <a
@@ -111,5 +128,18 @@ li {
 }
 a {
   color: #42b983;
+}
+.leMaster{
+  display: flex;
+  flex-wrap: wrap;
+  border-style: dot-dash;
+  border-width: 7px;
+  border-color: green;
+}
+.sections{
+  max-width: 700px;
+  border-style: groove;
+  border-width: 7px;
+  border-color: coral;
 }
 </style>
