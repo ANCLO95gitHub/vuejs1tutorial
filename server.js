@@ -25,10 +25,12 @@ app.use(cors(corsOptions));
 */
 app.get('/', (req, res) => res.send('Labo vues1tutorial  en testing'));
 app.get('/ceci', function( request, response) {
-  console.log( 'serveur Heroku get ceci' );
+  console.log( 'serveur Heroku get ceci,   request.connection.remoteAddress=' + request.connection.remoteAddress );
+  //console.log(JSON.stringify(request));
   //response.sendfile(__dirname + "/dist/index.html");
 
-  response.status(200).send('Welcome to vuejs1tutorial API.  Server Side... (dimanche le 23 DEC 2018.) hostname=' + hostname);
+  // OK response.status(200).send('Welcome to vuejs1tutorial API.  Server Side... (dimanche le 23 DEC 2018.) hostname=' + hostname);
+  response.status(200).send('Welcome to vuejs1tutorial API.  Server Side... (dimanche le 23 DEC 2018.) request.connection.remoteAddress=' + request.connection.remoteAddress );
   //res.render('salutation.ejs', {username: salut}));
 });
 
