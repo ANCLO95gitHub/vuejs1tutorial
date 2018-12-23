@@ -1,6 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const os = require("os");
+const hostname = os.hostname();
+
 const corsOptions = {
   origin: '*',
   methods: ['GET', 'PUT', 'POST', 'PATCH', 'DELETE', 'UPDATE'],
@@ -24,7 +27,8 @@ app.get('/', (req, res) => res.send('Labo vues1tutorial  en testing'));
 app.get('/ceci', function( request, response) {
   console.log( 'serveur Heroku get ceci' );
   //response.sendfile(__dirname + "/dist/index.html");
-  response.status(200).send('Welcome to vuejs1tutorial API.  Server Side... (dimanche le 23 DEC 2018.')
+
+  response.status(200).send('Welcome to vuejs1tutorial API.  Server Side... (dimanche le 23 DEC 2018.) hostname=' + hostname);
   //res.render('salutation.ejs', {username: salut}));
 });
 
